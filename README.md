@@ -6,26 +6,26 @@ The goal of this program is to act as a psychotherapist. It recognizes patterns 
 ---
 
 ## Sample Run
-[eliza] Hi, my name is Eliza. What is your name?
-[user] mallika
-[eliza] Hi Mallika, how can I help you? Type 'exit' at any time to quit the program
-[Mallika] I feel sad
-[eliza] Tell me more about feeling sad 
-[Mallika] I just feel like no one cares   
-[eliza] I understand, feeling like no one cares can be complex. Try to break it down into simpler parts.
-[Mallika] Well, I am very lonely
-[eliza] Why are you very lonely?
-[Mallika] I feel awkward in public
-[eliza] Since you're feeling awkward in public, would you like to hear a joke?
-[Mallika] sure   
-[eliza] Okay Mallika, how much does a chimney cost?
-[Mallika] I don't know
-[eliza] Nothing, it's on the house ;)
-[eliza] Wasn't that really funny?
-[Mallika] no
-[eliza] Let's get back to the main point of me being here. What else can I help you with?
-[Mallika] exit
-[eliza] Goodbye Mallika :)
+- [eliza] Hi, my name is Eliza. What is your name?
+- [user] mallika
+- [eliza] Hi Mallika, how can I help you? Type 'exit' at any time to quit the program
+- [Mallika] I feel sad
+- [eliza] Tell me more about feeling sad 
+- [Mallika] I just feel like no one cares   
+- [eliza] I understand, feeling like no one cares can be complex. Try to break it down into simpler parts.
+- [Mallika] Well, I am very lonely
+- [eliza] Why are you very lonely?
+- [Mallika] I feel awkward in public
+- [eliza] Since you're feeling awkward in public, would you like to hear a joke?
+- [Mallika] sure   
+- [eliza] Okay Mallika, how much does a chimney cost?
+- [Mallika] I don't know
+- [eliza] Nothing, it's on the house ;)
+- [eliza] Wasn't that really funny?
+- [Mallika] no
+- [eliza] Let's get back to the main point of me being here. What else can I help you with?
+- [Mallika] exit
+- [eliza] Goodbye Mallika :)
 
 ---
 
