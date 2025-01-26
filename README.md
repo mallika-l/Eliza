@@ -1,11 +1,11 @@
-Objective:
-The goal of this program is to act as a psychotherapist. It should recognize patterns in the 
-user's input and transform it to respond to it. This is possible using regular 
-expressions. They allow "Eliza" to spot certain words and capture parts of the sentence 
-that are important in order to respond appropriately
+# Eliza - Psychotherapist Program
 
+## Objective
+The goal of this program is to act as a psychotherapist. It recognizes patterns in the user's input and transforms responses accordingly using **regular expressions**. These allow "Eliza" to spot specific words and capture important parts of a sentence to respond appropriately.
 
-Sample Run:
+---
+
+## Sample Run
 [eliza] Hi, my name is Eliza. What is your name?
 [user] mallika
 [eliza] Hi Mallika, how can I help you? Type 'exit' at any time to quit the program
@@ -27,29 +27,41 @@ Sample Run:
 [Mallika] exit
 [eliza] Goodbye Mallika :)
 
-Algorithm:
+---
 
-1. The program prompts the user for a name. It accepts input that is a single word long 
-or the last word in a sentence of the form "My name is ...". It stores the name for use 
-throughout the program
+## Algorithm
 
-2. It then greets the user using the stored name and asks for the user to ask it a question. 
+1. **Greeting and Name Input**  
+   The program prompts the user for their name. It accepts:  
+   - A single word input (e.g., "Mallika").  
+   - The last word in sentences like "My name is ...".  
+   The name is stored for personalized responses throughout the session.
 
-3. Then an infinite while loop runs until the user types the word "exit"
+2. **User Interaction**  
+   Eliza greets the user by name and prompts them to ask a question or share their thoughts.
 
-4. Inside the while loop, it first checks if 'exit' has been input, and it ends the 
-program by saying "Goodbye, user :)" if it has. It then passes the username to an input handler function.
+3. **Main Loop**  
+   An infinite `while` loop runs until the user types "exit". Within the loop:  
+   - The program checks for "exit". If detected, it ends the session by saying goodbye.  
+   - Otherwise, the input is passed to the `inputHandler` function.
 
-5. The input handler function checks what type of question the user is asking. I chose to 
-spot for feelings, desires through the word 'want to', doubts through the phrases "I don't know", 
-"confused", and "I'm not sure", auxiliary verbs like am, have or is, the user asking for a joke, 
-absolute words that express black and white thinking, and concerning desires like suicide. 
-These are all expressed in the first section labeled "REGEXs"
+4. **Input Handling**  
+   The `inputHandler` function analyzes the user's input using predefined **REGEX patterns**. It identifies:  
+   - **Feelings** (e.g., "I feel sad").  
+   - **Desires** (e.g., "I want to ...").  
+   - **Doubts** (e.g., "I don't know", "I'm not sure", "confused").  
+   - **Auxiliary Verbs** (e.g., "am", "is", "have").  
+   - **Requests for Humor** (e.g., "Tell me a joke").  
+   - **Absolute Thinking** (e.g., "always", "never").  
+   - **Concerning Desires** (e.g., mentions of self-harm).  
 
-6. Once there is a REGEX match, the inputHandler function will call the appropriate function 
-to handle the type of question.
+5. **Response Generation**  
+   Once a pattern is matched, the program calls an appropriate function to generate a response:  
+   - **Feelings, desires, and auxiliary verbs**: Transform user input into questions.  
+     - Example: "I want to cry" → "Why do you want to cry?"  
+   - Multiple response options are defined in the **ELIZA OUTPUT STRINGS** section. Responses are selected randomly.
 
-7. The feeling, desire, and auxiliary verb functions all transform the input. If the user 
-types "I want to cry", the program transforms it to "Why do you want to cry?" There are a couple 
-of options for string responses that are shown in the section labeled "ELIZA OUTPUT STRINGS". 
-The program determines which response will be chosen randomly.
+6. **Session Termination**  
+   When the user types "exit", Eliza bids farewell using the stored username.
+
+---
